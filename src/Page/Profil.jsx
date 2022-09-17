@@ -3,6 +3,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { addwish, profilinformation } from "../http/req";
 import OneWish from "./OneWish";
+import styles from "./styles.css";
+
+
 const Profil = () => {
     const [pr, setpr] = useState([])
     const [thing, setThing] = useState()
@@ -41,15 +44,14 @@ const Profil = () => {
         <div>
             <div className="posts3">
                 <div className="item1">
-            Your nick: {pr.nick}
-            </div>
-            <div className="item3">
+                    Your nick: {pr.nick}
+                </div>
+                <div className="item3">
 
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                Share
-            </button>
-            </div>
-
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        Share
+                    </button>
+                </div>
             </div>
             {wishs.map(wish => <OneWish wish={wish} />)}
             <div className="App">
