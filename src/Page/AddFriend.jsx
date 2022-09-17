@@ -9,13 +9,14 @@ const AddFriend = ({ friend }) => {
   useEffect(() => {
 
   }, []);
-  const adfriend = async () => {
+  const adfriend = async (id) => {
     addfriend(id).then(
       navigate("/friends"))
   }
   return (
     <div>
-      <h1>test</h1>
+      {id}
+      <button onClick={() => { adfriend(id) }}>Добавить в друзья</button>
     </div>
   );
 }
