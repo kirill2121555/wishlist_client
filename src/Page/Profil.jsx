@@ -31,16 +31,26 @@ const Profil = () => {
 
 
     if (loading) {
-        return <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
+        return <div className="App">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
         </div>
     }
     return (
         <div>
+            <div className="posts3">
+                <div className="item1">
             Your nick: {pr.nick}
+            </div>
+            <div className="item3">
+
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                 Share
             </button>
+            </div>
+
+            </div>
             {wishs.map(wish => <OneWish wish={wish} />)}
             <div className="App">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1" >

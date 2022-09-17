@@ -9,17 +9,25 @@ const ListFriends = () => {
 
     const [friends, setFriends] = useState([])
     const [email, setEmail] = useState('')
+    const [loading, setLoading] = useState(true)
+
 
     useEffect(() => {
         myfriends().then(data => {
             setFriends(data)
-        })
+        }).finally(() => { setLoading(false) })
     }, []);
 
     const addfrien = async () => {
         await addfriend(email).then(window.location.reload())
     }
-
+    if (loading) {
+        return <div className="App">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        </div>
+    }
     return (
         <div>
             <br></br>
@@ -29,7 +37,7 @@ const ListFriends = () => {
                     {friends.map(friend => <Friend friend={friend} />)}
                 </div>
                 :
-               <div className="App"><h2>Friends list is empty</h2></div>}
+                <div className="App"><h2>Friends list is empty</h2></div>}
             <div className="App">
                 <br></br>
 
