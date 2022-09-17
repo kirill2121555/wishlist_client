@@ -1,0 +1,39 @@
+.posts {
+    display: grid;
+    grid-template-columns: 90% 5% 5%;
+    grid-gap: 10px;
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "a c b";
+}
+.posts2 {
+    display: grid;
+    grid-template-columns: 88% 12%;
+    grid-gap: 10px;
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "a c";
+}
+
+.item1 {
+    grid-area: a;
+}
+
+.item2 {
+    grid-area: b;
+
+}
+
+.item3 {
+    grid-area: c;
+}
+.pict {
+width: 30px;
+}
+
+.o {
+    border-radius: 10px; /* Радиус скругления */
+    border-width: 3px;
+
+    border: 5px solid bisque;
+}
