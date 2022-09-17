@@ -8,6 +8,7 @@ const Profil = () => {
     const [thing, setThing] = useState()
     const [wishs, setWishs] = useState([])
     const [qrcode, setQrcode] = useState('')
+    const [loading, setLoading] = useState(true)
 
 
     useEffect(() => {
@@ -16,7 +17,7 @@ const Profil = () => {
             setpr(data[0])
             setQrcode(data[1])
             setWishs(data[2])
-        })
+        }).finally(() => { setLoading(false) })
     }, []);
 
 
@@ -28,6 +29,12 @@ const Profil = () => {
         else (alert('Напишите желание'))
     }
 
+
+    if (loading) {
+        return <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    }
     return (
         <div>
             Your nick: {pr.nick}

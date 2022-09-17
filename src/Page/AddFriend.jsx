@@ -14,9 +14,9 @@ const AddFriend = ({ friend }) => {
       navigate("/friends"))
   }
   return (
-    <div>
-      {id}
-      <button onClick={() => { adfriend(id) }}>Добавить в друзья</button>
+    <div className="App">
+      <h3>Add a user {id} to your friends list ? </h3>
+      <button className="btn btn-primary" onClick={() => { adfriend(id) }}>Add a friend</button>
     </div>
   );
 }

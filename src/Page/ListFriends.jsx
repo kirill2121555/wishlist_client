@@ -29,7 +29,7 @@ const ListFriends = () => {
                     {friends.map(friend => <Friend friend={friend} />)}
                 </div>
                 :
-                'пока нет друзей'}
+               <div className="App"><h2>Friends list is empty</h2></div>}
             <div className="App">
                 <br></br>
 
@@ -54,7 +54,6 @@ const ListFriends = () => {
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" onClick={addfrien}>Add friend</button>
-
                         </div>
                     </div>
                 </div>
