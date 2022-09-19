@@ -13,7 +13,6 @@ const Profil = () => {
     const [qrcode, setQrcode] = useState('')
     const [loading, setLoading] = useState(true)
 
-
     useEffect(() => {
         profilinformation().then(data => {
             console.log(data)
@@ -41,7 +40,7 @@ const Profil = () => {
         </div>
     }
     return (
-        <div>
+        <div> 
             <div className="posts3">
                 <div className="item1">
                     Your nick: {pr.nick}

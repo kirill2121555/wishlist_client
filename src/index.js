@@ -11,8 +11,8 @@ root.render(
     <Context.Provider value={{
         user: new UserStore(),
     }}>
-        <BrowserRouter>
-            <App />
+        <BrowserRouter className='bbb'>
+            <App  />
         </BrowserRouter></Context.Provider>
 );
 

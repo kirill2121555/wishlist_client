@@ -23,7 +23,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+  
 .App-link {
   color: #61dafb;
 }
@@ -82,4 +82,47 @@
   border-radius: 8px;
   padding: 15px;
   margin-top: 15px;
+}
+
+
+
+
+.tab input, .tab-content { display: none; }
+.tab {
+ font: 0.8rem/1.2 Arial, sans-serif; 
+ border: 1px solid #e9eaec; 
+ border-radius: 3px;
+ color: #848994; 
+ margin-bottom: 10px; 
+}
+.tab-title {
+ padding: 10px; 
+ display: block; 
+ text-transform: uppercase;
+ font-weight: bold;
+ cursor: pointer; 
+}
+.tab-title::after {
+ content: '+'; 
+ float: right; 
+}
+.tab-content {
+ padding: 10px 20px; /* Поля вокруг текста */
+}
+.tab :checked + .tab-title {
+ background-color: #50a2de; /* Цвет фона */
+ border-radius: 3px 3px 0 0; /* Скругляем уголки */
+ color: #fff; /* Цвет текста */
+}
+.tab :checked + .tab-title::after {
+ content: '−'; /* Выводим минус */
+}
+.tab :checked ~ .tab-content {
+ display: block; /* Показываем содержимое */
+}
+
+.textar{
+  width:1200px;
+  rows:2;
+  resize:none;
 }

@@ -19,7 +19,7 @@ const {user} = useContext(Context)
       </nav>)
       :
       (<nav class="navbar navbar-expand-sm bg-light justify-content-center">
-        <a class="navbar-brand" ><NavLink to="login" className="nav-link">Wishlist</NavLink></a>
+        <a class="navbar-brand" ><NavLink to="/" className="nav-link">Wishlist</NavLink></a>
       </nav>)
     }
   </nav >

@@ -19,7 +19,10 @@ const Friendwish = ({ friend }) => {
       <div className="o">
         <div className="posts">
           <div className="item1">
-            {friend.nick}
+            {friend.nick}        
+            <br></br>
+             <small>{friend.birthday.slice(0,10)}</small>
+
           </div>
           <div className="item2">
             <img className="pict" src={trash}

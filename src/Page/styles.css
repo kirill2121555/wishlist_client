@@ -16,23 +16,26 @@
 }
 .posts3 {
     display: grid;
-    grid-template-columns: 90% 5%;
+    grid-template-columns: 93% 5%;
     grid-gap: 10px;
     grid-auto-rows: auto;
     grid-template-areas:
-        "a b";
+        "a c";
 }
 
 .item1 {
+    align-self: center;
     grid-area: a;
 }
 
 .item2 {
+    align-self: center;
     grid-area: b;
 
 }
 
 .item3 {
+    align-self: center;
     grid-area: c;
 }
 .pict {

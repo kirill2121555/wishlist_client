@@ -13,7 +13,7 @@ import AddFriend from '../Page/AddFriend'
 export const publicRoutes = [
  
     {
-        path: "/login",
+        path: "/",
         Element: <Login />
     },
     {
@@ -34,14 +34,6 @@ export const authRoutes = [
     {
         path: "/Friend",
         Element: <ProfilFriend />
-    },
-    {
-        path: "/login",
-       Element: <Login />
-    },
-    {
-        path: "/registration",
-       Element: <Registration />
     },
     {
         path: "/friendwish/:id",
