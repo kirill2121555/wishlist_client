@@ -12,8 +12,7 @@ const Registration = observer(() => {
 
   const click = async () => {
     try {
-      let data;
-      data = await registration(email, password, nick, date);
+      await registration(email, password, nick, date);
       alert('Log in to your account')
       navigate("/");
     } catch (e) {

@@ -1,27 +1,21 @@
 import React from "react";
 import { useState } from "react";
 import { deleteonewish, updateonewish } from "../http/req";
-import styles from "./styles.css";
 import pen from '../img/pen.png'
 import trash from '../img/trash.png'
 import { useEffect } from "react";
 
 const OneWish = ({ wish }) => {
     const [text, setText] = useState('')
-    // useEffect(() => {
-    //setText(wish.title)
-    // }, []);
+    useEffect(() => {
+        setText(wish.title)
+    }, []);
 
     const deletewish = async (id) => {
-        alert(id)
-
-        await deleteonewish(id)
-            .then(window.location.reload()
-            )
+        await deleteonewish(id).then(window.location.reload())
     }
     const updatewish = async (id, text) => {
-        await updateonewish(id, text)
-            .then(window.location.reload())
+        await updateonewish(id, text).then(window.location.reload())
     }
     return (
         <div>
@@ -48,7 +42,7 @@ const OneWish = ({ wish }) => {
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Edit wish</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -58,7 +52,7 @@ const OneWish = ({ wish }) => {
                             ></input>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" onClick={() => { updatewish(wish._id,text) }}>Edit wish</button>
+                            <button type="button" class="btn btn-primary" onClick={() => { updatewish(wish._id, text) }}>Edit wish</button>
                         </div>
                     </div>
                 </div>
